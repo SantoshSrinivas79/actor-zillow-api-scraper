@@ -98,3 +98,24 @@ This example will add a new field `schools`, change the `homeStatus` field and r
 ### Epilogue
 Thank you for trying my actor. You can send any feedback you have to my email `cermak.petr6@gmail.com`.  
 If you find any bug, please create an issue on the [Github page](https://github.com/cermak-petr/actor-zillow-api-scraper).
+
+
+
+### Steps to Run Locally
+
+Create an input file at `./apify_storage/key_value_stores/default/INPUT.json`
+
+Example:
+
+```json
+{
+  "search": "Los Angeles",
+  "maxItems": 200,
+  "maxLevel": 20,
+  "simple": true,
+  "extendOutputFunction": "(data) => { return {}; }",
+  "proxyConfiguration": {
+    "useApifyProxy": false
+  }
+}
+```
